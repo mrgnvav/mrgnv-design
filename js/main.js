@@ -142,29 +142,75 @@
     });
   }
 
-  /* ── 6. Форма (демо) ─────────────────────────── */
+  /* ── 6. Форма связи ──────────────────────────── */
   var form = document.getElementById("contact-form");
   if (form) {
+    // Вставь сюда свой endpoint из Formspree вида "https://formspree.io/f/xxxxxxxx"
+    var FORMSPREE_ENDPOINT = "";
+
+    var status = form.querySelector(".form__status");
+    var submitBtn = form.querySelector('button[type="submit"]');
+
+    function setStatus(text, color) {
+      status.textContent = text;
+      status.style.color = color;
+    }
+
+    function hideStatusLater() {
+      setTimeout(function () { setStatus("", ""); }, 8000);
+    }
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
       var name = form.querySelector("#name").value.trim();
       var email = form.querySelector("#email").value.trim();
       var message = form.querySelector("#message").value.trim();
-      var status = form.querySelector(".form__status");
 
       if (!name || !email || !message) {
-        status.textContent = "Пожалуйста, заполните все поля.";
-        status.style.color = "#ff7b6b";
+        setStatus("Пожалуйста, заполните все поля.", "#ff7b6b");
         return;
       }
 
-      status.textContent = "Спасибо! Заявка отправлена (демо). Скоро свяжусь. ✦";
-      status.style.color = "#2dd4bf";
-      form.reset();
-      setTimeout(function () {
-        status.textContent = "";
-      }, 6000);
+      // Демо-режим, пока endpoint Formspree не подключён
+      if (!FORMSPREE_ENDPOINT) {
+        setStatus("Спасибо! Заявка отправлена (демо). Скоро свяжусь. ✦", "#2dd4bf");
+        form.reset();
+        hideStatusLater();
+        return;
+      }
+
+      submitBtn.disabled = true;
+      setStatus("Отправляю…", "#8fa29d");
+
+      fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: { "Accept": "application/json", "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          message: message,
+          _subject: "Заявка с сайта MRGNV Design",
+          _gotcha: (form.querySelector("[name='_gotcha']") || {}).value || ""
+        })
+      })
+        .then(function (res) {
+          if (res.ok) {
+            setStatus("Спасибо! Сообщение отправлено. Скоро свяжусь. ✦", "#2dd4bf");
+            form.reset();
+            hideStatusLater();
+          } else {
+            return res.json().then(function (data) {
+              var msg = (data && data.errors && data.errors[0] && data.errors[0].message) ||
+                        "не удалось отправить сообщение.";
+              throw new Error(msg);
+            });
+          }
+        })
+        .catch(function (err) {
+          setStatus("Ошибка: " + err.message + " Напишите напрямую — morandvas@gmail.com", "#ff7b6b");
+        })
+        .then(function () { submitBtn.disabled = false; });
     });
   }
 
