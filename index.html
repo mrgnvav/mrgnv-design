@@ -298,24 +298,20 @@
           </ul>
         </div>
 
-        <form class="contacts__form" id="contact-form" novalidate>
-          <!-- honeypot: спам-боты заполняют это поле, люди его не видят -->
-          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;height:0;overflow:hidden">
-          <div class="field">
-            <label for="name">Ваше имя</label>
-            <input type="text" id="name" name="name" placeholder="Как к вам обращаться?" required>
+        <div class="contacts__visual reveal">
+          <div class="visual__orb" aria-hidden="true"></div>
+          <div class="visual__badge">
+            <span class="visual__pulse" aria-hidden="true"></span>
+            Свободен для заказов
           </div>
-          <div class="field">
-            <label for="email">Email или Telegram</label>
-            <input type="text" id="email" name="email" placeholder="Куда прислать ответ?" required>
-          </div>
-          <div class="field">
-            <label for="message">О проекте</label>
-            <textarea id="message" name="message" rows="4" placeholder="Пара слов о задаче…" required></textarea>
-          </div>
-          <button class="btn btn--primary" type="submit">Отправить</button>
-          <p class="form__status" role="status"></p>
-        </form>
+          <p class="visual__quote">«Хороший дизайн не&nbsp;нужно объяснять — он&nbsp;продаёт сам»</p>
+          <ul class="visual__chips" aria-label="Специализации">
+            <li>Логотипы</li>
+            <li>Брендинг</li>
+            <li>Соцсети</li>
+            <li>Лендинги</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>

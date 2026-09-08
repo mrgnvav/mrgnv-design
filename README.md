@@ -46,8 +46,8 @@ mrgnv-design/
 - `https://instagram.com/mrgnv.av`
 - `https://www.behance.net/andrewmorgunov`
 
-Форма сейчас демонстрационная (не отправляет письмо). Для реальной отправки подключи сервис
-вроде Formspree / Telegram Bot API.
+Форма связи заменена визуальной карточкой: заявки принимаются через email,
+Telegram, Instagram и Behance (ссылки в секции «Контакты»).
 
 ## Публикация (GitHub Pages)
 
