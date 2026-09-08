@@ -606,11 +606,6 @@ section[id] { scroll-margin-top: 84px; }
     radial-gradient(45% 60% at 50% 0%, rgba(45, 212, 191, 0.09), transparent 70%),
     radial-gradient(35% 50% at 95% 90%, rgba(20, 184, 166, 0.07), transparent 70%);
 }
-.works::before {
-  background:
-    radial-gradient(40% 50% at 8% 20%, rgba(45, 212, 191, 0.07), transparent 70%),
-    radial-gradient(45% 55% at 92% 80%, rgba(14, 116, 144, 0.09), transparent 70%);
-}
 .contacts::before {
   background:
     radial-gradient(55% 65% at 80% 20%, rgba(45, 212, 191, 0.08), transparent 70%),
@@ -858,98 +853,6 @@ section[id] { scroll-margin-top: 84px; }
   line-height: 1.65;
   margin: 0;
 }
-/* ── ПОРТФОЛИО ──────────────────────────────── */
-.works { background: var(--bg); }
-
-.works__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-}
-
-.work-card {
-  margin: 0;
-  background: var(--surface);
-  border: 1px solid var(--glass-line);
-  border-radius: var(--radius);
-  overflow: hidden;
-  backdrop-filter: blur(14px) saturate(1.3);
-  -webkit-backdrop-filter: blur(14px) saturate(1.3);
-  transition: transform 0.3s var(--ease), border-color 0.3s ease, box-shadow 0.3s var(--ease);
-}
-.work-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--accent);
-  box-shadow: var(--shadow);
-}
-
-.work-card__thumb {
-  position: relative;
-  aspect-ratio: 4 / 3;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-}
-
-.work-card__thumb::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 55%, rgba(6, 15, 17, 0.7) 100%);
-}
-
-.work-card__label {
-  font-weight: 800;
-  font-size: 1.35rem;
-  color: var(--text);
-  position: relative;
-  z-index: 2;
-  text-shadow: 0 4px 22px rgba(0, 0, 0, 0.65);
-  transition: transform 0.35s var(--ease), color 0.3s ease;
-}
-.work-card:hover .work-card__label {
-  transform: scale(1.12);
-  color: var(--accent);
-}
-
-/* Бирюзовые градиенты-плейсхолдеры */
-.thumb--1 { background: linear-gradient(135deg, #1f3a3f, #0f1c20); }
-.thumb--2 { background: linear-gradient(135deg, #163d3a, #0a1f1d); }
-.thumb--3 { background: linear-gradient(135deg, #2c3a4a, #131c26); }
-.thumb--4 { background: linear-gradient(135deg, #12425c, #081f2e); }
-.thumb--5 { background: linear-gradient(135deg, #25473f, #0e241e); }
-.thumb--6 { background: linear-gradient(135deg, #3a3450, #161428); }
-
-.work-card figcaption {
-  padding: 18px 20px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-}
-
-.work-card__title {
-  font-family: var(--font-display);
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin: 0 0 4px;
-}
-
-.work-card__cat {
-  display: inline-block;
-  font-size: 0.8rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--accent);
-}
-
-.work-card__go {
-  font-weight: 800;
-  color: var(--muted);
-  transition: color 0.25s ease, transform 0.25s var(--ease);
-}
-.work-card:hover .work-card__go { color: var(--accent); transform: translate(3px, -3px); }
-
 /* ── CTA-ПЛАШКА ─────────────────────────────── */
 .cta { padding: clamp(30px, 6vw, 70px) 0; }
 
@@ -1277,7 +1180,6 @@ section[id] { scroll-margin-top: 84px; }
 /* ── АДАПТИВНОСТЬ ───────────────────────────── */
 @media (max-width: 980px) {
   .services__grid { grid-template-columns: repeat(2, 1fr); }
-  .works__grid { grid-template-columns: repeat(2, 1fr); }
   .about__grid { grid-template-columns: 1fr; }
   .contacts__grid { grid-template-columns: 1fr; }
   .section__head--stacked { grid-template-columns: 1fr; }
@@ -1322,8 +1224,7 @@ section[id] { scroll-margin-top: 84px; }
   .field input,
   .field textarea { font-size: 16px; }
 
-  .services__grid,
-  .works__grid { grid-template-columns: 1fr; }
+  .services__grid { grid-template-columns: 1fr; }
 
   .about__card { padding: 32px 24px; }
   .contacts__form { padding: 26px 22px; }
