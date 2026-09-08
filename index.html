@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MRGNV Design — графический дизайн</title>
+  <meta name="description" content="MRGNV Design — брендинг, логотипы и графический дизайн, который работает на ваш бизнес.">
+
+  <!-- Шрифты -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Стили -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon (логотип) -->
+  <link rel="icon" href="img/logo.png">
+</head>
+<body>
+
+  <!-- ══════════════ ШАПКА ══════════════ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#hero" class="logo" aria-label="MRGNV Design — на главную">
+        <img src="img/logo.png" alt="Логотип MRGNV Design" class="logo__img" width="38" height="38">
+        <span class="logo__text">MRGNV<em>DESIGN</em></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a class="nav__link" href="#about">Обо мне</a>
+        <a class="nav__link" href="#services">Услуги</a>
+        <a class="nav__link" href="#works">Портфолио</a>
+        <a class="nav__link" href="#contacts">Контакты</a>
+        <a class="nav__link nav__cta" href="#contacts">Обсудить проект</a>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══════════════ HERO ══════════════ -->
+  <section class="hero" id="hero">
+    <div class="grain" aria-hidden="true"></div>
+    <div class="hero__spotlight" aria-hidden="true"></div>
+
+    <div class="hero__shapes" aria-hidden="true">
+      <span class="shape shape--1" data-depth="26"><span class="shape__core"></span></span>
+      <span class="shape shape--2" data-depth="38"><span class="shape__core"></span></span>
+      <span class="shape shape--3" data-depth="22"><span class="shape__core"></span></span>
+      <span class="shape shape--4" data-depth="46"><span class="shape__core"></span></span>
+    </div>
+
+    <div class="hero__blob" aria-hidden="true">
+      <svg viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="blobGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#2dd4bf" stop-opacity="0.28"></stop>
+            <stop offset="55%" stop-color="#14b8a6" stop-opacity="0.12"></stop>
+            <stop offset="100%" stop-color="#0e7490" stop-opacity="0"></stop>
+          </linearGradient>
+        </defs>
+        <path d="M380 90C430 150 470 200 455 270S400 400 330 435c-80 40-170 35-240 0C20 385-15 320 10 240-5 160 10 90 70 50 130 10 190 20 260 15c70-5 130-5 120 75z" fill="url(#blobGrad)"></path>
+      </svg>
+    </div>
+
+    <!-- Большая бирюзовая «M» — центр композиции (как на референсе) -->
+    <div class="hero__logomark" aria-hidden="true">
+      <span class="logomark__aura"></span>
+      <span class="logomark__letter">M</span>
+      <span class="logomark__shine"></span>
+    </div>
+
+    <!-- Плавающие светящиеся частицы (как на референсе) -->
+    <div class="hero__particles" aria-hidden="true">
+      <i class="hero__particle" style="--x:62%;--y:14%;--s:6px;--d:9s;--dl:0s"></i>
+      <i class="hero__particle" style="--x:89%;--y:30%;--s:9px;--d:11s;--dl:1.4s"></i>
+      <i class="hero__particle" style="--x:37%;--y:76%;--s:5px;--d:8s;--dl:.7s"></i>
+      <i class="hero__particle" style="--x:22%;--y:28%;--s:7px;--d:12s;--dl:2.2s"></i>
+      <i class="hero__particle" style="--x:79%;--y:86%;--s:4px;--d:7.5s;--dl:1s"></i>
+      <i class="hero__particle" style="--x:55%;--y:7%;--s:5px;--d:10s;--dl:3s"></i>
+    </div>
+
+    <div class="hero__badge-spin" aria-hidden="true">
+      <span class="hero__badge-ring">D</span>
+    </div>
+
+    <div class="container hero__inner">
+      <p class="hero__tagline">/// графический дизайн</p>
+
+      <h1 class="hero__title">
+        Дизайн,<br>
+        который <span class="accent">работает</span><br>
+        на ваш бренд
+      </h1>
+
+      <p class="hero__sub">
+        MRGNV&nbsp;Design — брендинг, логотипы, соцсети и&nbsp;полиграфия.
+        Создаю визуал, который выделяет вас среди конкурентов.
+      </p>
+
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#works">Смотреть работы</a>
+        <a class="btn btn--ghost" href="#contacts">Связаться</a>
+      </div>
+    </div>
+
+    <div class="hero__marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>БРЕНДИНГ</span><span>✦</span>
+        <span>ЛОГОТИПЫ</span><span>✦</span>
+        <span>СОЦСЕТИ</span><span>✦</span>
+        <span>ПОЛИГРАФИЯ</span><span>✦</span>
+        <span>АЙДЕНТИКА</span><span>✦</span>
+        <span>БРЕНДИНГ</span><span>✦</span>
+        <span>ЛОГОТИПЫ</span><span>✦</span>
+        <span>СОЦСЕТИ</span><span>✦</span>
+        <span>ПОЛИГРАФИЯ</span><span>✦</span>
+        <span>АЙДЕНТИКА</span><span>✦</span>
+      </div>
+    </div>
+
+    <div class="hero__stats">
+      <div class="stat"><strong>60+</strong><span>проектов</span></div>
+      <div class="stat"><strong>5 лет</strong><span>в дизайне</span></div>
+      <div class="stat"><strong>100%</strong><span>вовлечённость</span></div>
+    </div>
+  </section>
+<!-- ══════════════ ОБО МНЕ ══════════════ -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__num">01</span>
+        <h2 class="section__title">Обо мне</h2>
+        <span class="section__line" aria-hidden="true"></span>
+      </div>
+
+      <div class="about__grid">
+        <div class="about__card">
+          <span class="about__role">Графический дизайнер</span>
+          <h3 class="about__name">Привет! Я — <span class="accent">Андрей</span></h3>
+          <p class="about__text">
+            Графический дизайнер. Помогаю брендам и&nbsp;предпринимателям
+            говорить на&nbsp;языке визуала: от&nbsp;идеи логотипа до&nbsp;готовой
+            айдентики, которая выглядит дорого и&nbsp;продаёт.
+          </p>
+          <p class="about__text">
+            Мой подход — простой и&nbsp;честный: понять задачу, найти суть,
+            сделать красиво. Без лишних слов и&nbsp;без скучных макетов.
+          </p>
+          <a class="btn btn--ghost btn--sm" href="#contacts">Написать мне</a>
+        </div>
+
+        <div class="about__facts">
+          <div class="fact"><span class="fact__num">01</span><p><strong>Брендинг</strong><br>айдентика под ключ</p><span class="fact__arrow">→</span></div>
+          <div class="fact"><span class="fact__num">02</span><p><strong>Логотипы</strong><br>запоминающиеся знаки</p><span class="fact__arrow">→</span></div>
+          <div class="fact"><span class="fact__num">03</span><p><strong>Соцсети</strong><br>оформление и дизайн-системы</p><span class="fact__arrow">→</span></div>
+          <div class="fact"><span class="fact__num">04</span><p><strong>Полиграфия</strong><br>визитки, плакаты, упаковка</p><span class="fact__arrow">→</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ УСЛУГИ ══════════════ -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__num">02</span>
+        <h2 class="section__title">Услуги</h2>
+        <span class="section__line" aria-hidden="true"></span>
+      </div>
+
+      <div class="services__grid">
+
+        <article class="service-card reveal">
+          <span class="service-card__icon" aria-hidden="true">◈</span>
+          <h3 class="service-card__title">Брендинг</h3>
+          <p class="service-card__text">Разработка айдентики под ключ: стратегия, логотип, фирменный стиль и&nbsp;гайдбук.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <span class="service-card__icon" aria-hidden="true">◉</span>
+          <h3 class="service-card__title">Логотипы</h3>
+          <p class="service-card__text">Запоминающийся знак, который будет работать на&nbsp;узнаваемость годами.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <span class="service-card__icon" aria-hidden="true">▦</span>
+          <h3 class="service-card__title">Соцсети</h3>
+          <p class="service-card__text">Оформление профилей, шаблоны сторис и&nbsp;дизайн-системы для&nbsp;рекламы.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <span class="service-card__icon" aria-hidden="true">▣</span>
+          <h3 class="service-card__title">Полиграфия</h3>
+          <p class="service-card__text">Визитки, плакаты, буклеты и&nbsp;упаковка, которые приятно держать в&nbsp;руках.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <span class="service-card__icon" aria-hidden="true">✸</span>
+          <h3 class="service-card__title">Айдентика</h3>
+          <p class="service-card__text">Единый визуальный язык для&nbsp;вашего бизнеса на&nbsp;всех носителях.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <span class="service-card__icon" aria-hidden="true">✦</span>
+          <h3 class="service-card__title">Редизайн</h3>
+          <p class="service-card__text">Освежим старый бренд: новый взгляд без&nbsp;потери узнаваемости.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+<!-- ══════════════ ПОРТФОЛИО ══════════════ -->
+  <section class="section works" id="works">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__num">03</span>
+        <h2 class="section__title">Избранные <span class="accent">работы</span></h2>
+        <span class="section__line" aria-hidden="true"></span>
+      </div>
+      <p class="section__note">Здесь скоро появятся мои работы. А пока — заготовки.</p>
+
+      <div class="works__grid">
+
+        <figure class="work-card reveal">
+          <div class="work-card__thumb thumb--1"><span class="work-card__label">01</span></div>
+          <figcaption>
+            <div>
+              <h3 class="work-card__title">Логотип / Кофейня</h3>
+              <span class="work-card__cat">Брендинг</span>
+            </div>
+            <span class="work-card__go" aria-hidden="true">↗</span>
+          </figcaption>
+        </figure>
+
+        <figure class="work-card reveal">
+          <div class="work-card__thumb thumb--2"><span class="work-card__label">02</span></div>
+          <figcaption>
+            <div>
+              <h3 class="work-card__title">Айдентика / Фитнес</h3>
+              <span class="work-card__cat">Айдентика</span>
+            </div>
+            <span class="work-card__go" aria-hidden="true">↗</span>
+          </figcaption>
+        </figure>
+
+        <figure class="work-card reveal">
+          <div class="work-card__thumb thumb--3"><span class="work-card__label">03</span></div>
+          <figcaption>
+            <div>
+              <h3 class="work-card__title">Соцсети / Кафе</h3>
+              <span class="work-card__cat">Соцсети</span>
+            </div>
+            <span class="work-card__go" aria-hidden="true">↗</span>
+          </figcaption>
+        </figure>
+
+        <figure class="work-card reveal">
+          <div class="work-card__thumb thumb--4"><span class="work-card__label">04</span></div>
+          <figcaption>
+            <div>
+              <h3 class="work-card__title">Постер / Концерт</h3>
+              <span class="work-card__cat">Полиграфия</span>
+            </div>
+            <span class="work-card__go" aria-hidden="true">↗</span>
+          </figcaption>
+        </figure>
+
+        <figure class="work-card reveal">
+          <div class="work-card__thumb thumb--5"><span class="work-card__label">05</span></div>
+          <figcaption>
+            <div>
+              <h3 class="work-card__title">Упаковка / Чай</h3>
+              <span class="work-card__cat">Полиграфия</span>
+            </div>
+            <span class="work-card__go" aria-hidden="true">↗</span>
+          </figcaption>
+        </figure>
+
+        <figure class="work-card reveal">
+          <div class="work-card__thumb thumb--6"><span class="work-card__label">06</span></div>
+          <figcaption>
+            <div>
+              <h3 class="work-card__title">Бренд / Студия</h3>
+              <span class="work-card__cat">Брендинг</span>
+            </div>
+            <span class="work-card__go" aria-hidden="true">↗</span>
+          </figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+<!-- ══════════════ КОНТАКТЫ ══════════════ -->
+  <section class="section contacts" id="contacts">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__num">04</span>
+        <h2 class="section__title">Контакты</h2>
+        <span class="section__line" aria-hidden="true"></span>
+      </div>
+
+      <div class="contacts__grid">
+        <div class="contacts__info">
+          <h3 class="contacts__heading">Есть проект?<br><span class="accent">Давайте обсудим.</span></h3>
+          <p class="contacts__text">Напишите мне — отвечаю быстро и&nbsp;по&nbsp;делу.</p>
+
+          <ul class="contacts__list">
+            <li>
+              <a href="mailto:morandvas@gmail.com">
+                <svg class="contact__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="4" width="20" height="16" rx="3"></rect>
+                  <path d="m2 7 10 6L22 7"></path>
+                </svg>
+                <span>morandvas@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://t.me/morandvas" target="_blank" rel="noopener">
+                <svg class="contact__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M21.9 4.1 2.7 11.4c-1.1.4-1 1.9.1 2.2l4.7 1.5 1.8 5.7c.3 1 1.6 1.2 2.3.4l2.6-2.7 4.8 3.6c.9.7 2.3.2 2.5-1l3.1-15.3c.2-1.2-1-2.2-1.6-1.7z"></path>
+                </svg>
+                <span>@morandvas</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com/mrgnv.av" target="_blank" rel="noopener">
+                <svg class="contact__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="20" rx="5"></rect>
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"></circle>
+                </svg>
+                <span>@mrgnv.av</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.behance.net/andrewmorgunov" target="_blank" rel="noopener">
+                <span class="contact__icon contact__icon--be" aria-hidden="true">Bē</span>
+                <span>Behance</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <form class="contacts__form" id="contact-form" novalidate>
+          <div class="field">
+            <label for="name">Ваше имя</label>
+            <input type="text" id="name" name="name" placeholder="Как к вам обращаться?" required>
+          </div>
+          <div class="field">
+            <label for="email">Email или Telegram</label>
+            <input type="text" id="email" name="email" placeholder="Куда прислать ответ?" required>
+          </div>
+          <div class="field">
+            <label for="message">О проекте</label>
+            <textarea id="message" name="message" rows="4" placeholder="Пара слов о задаче…" required></textarea>
+          </div>
+          <button class="btn btn--primary" type="submit">Отправить</button>
+          <p class="form__status" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ ПОДВАЛ ══════════════ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#hero" class="logo logo--footer" aria-label="MRGNV Design — наверх">
+        <img src="img/logo.png" alt="Логотип MRGNV Design" class="logo__img" width="36" height="36">
+        <span class="logo__text">MRGNV<em>DESIGN</em></span>
+      </a>
+      <p class="footer__copy">© <span id="year">2025</span> MRGNV Design. Все права защищены.</p>
+      <a class="footer__top" href="#hero">Наверх ↑</a>
+    </div>
+  </footer>
+
+  <!-- Скрипты -->
+  <script src="js/main.js"></script>
+</body>
+</html>
