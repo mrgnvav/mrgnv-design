@@ -950,6 +950,99 @@ section[id] { scroll-margin-top: 84px; }
 }
 .work-card:hover .work-card__go { color: var(--accent); transform: translate(3px, -3px); }
 
+/* ── CTA-ПЛАШКА ─────────────────────────────── */
+.cta { padding: clamp(30px, 6vw, 70px) 0; }
+
+.cta__plate {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: clamp(36px, 6vw, 60px) clamp(28px, 5vw, 64px);
+  border-radius: 28px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+  color: #06231f;
+  box-shadow: 0 24px 70px rgba(45, 212, 191, 0.28);
+}
+
+/* декоративный блик */
+.cta__plate::after {
+  content: "";
+  position: absolute;
+  inset: -40% 55% 55% -20%;
+  background: radial-gradient(closest-side, rgba(255, 255, 255, 0.35), transparent);
+  pointer-events: none;
+}
+
+.cta__tag {
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 7px 16px;
+  border-radius: 999px;
+  background: #06231f;
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.cta__title {
+  margin: 0 0 12px;
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3.4vw, 2.3rem);
+  line-height: 1.15;
+  color: #06231f;
+}
+
+.cta__sub {
+  margin: 0;
+  max-width: 46ch;
+  font-size: 1.05rem;
+  color: rgba(6, 35, 31, 0.82);
+}
+.cta__sub strong { color: #06231f; font-weight: 800; white-space: nowrap; }
+
+.cta__actions { flex-shrink: 0; text-align: center; }
+
+.cta__btn {
+  display: inline-block;
+  padding: 16px 36px;
+  border-radius: 999px;
+  background: #06231f;
+  color: #ffffff;
+  font-weight: 700;
+  white-space: nowrap;
+  box-shadow: 0 12px 30px rgba(6, 35, 31, 0.35);
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+.cta__btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(6, 35, 31, 0.45);
+}
+
+.cta__tg {
+  display: block;
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: rgba(6, 35, 31, 0.75);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.cta__tg:hover { color: #06231f; text-decoration: underline; }
+
+@media (max-width: 760px) {
+  .cta__plate {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  .cta__actions { text-align: left; }
+}
+
 /* ── КОНТАКТЫ ───────────────────────────────── */
 .contacts {
   background:
