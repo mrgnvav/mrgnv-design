@@ -612,12 +612,6 @@ section[id] { scroll-margin-top: 84px; }
     radial-gradient(30% 45% at 5% 90%, rgba(20, 184, 166, 0.08), transparent 70%);
 }
 
-.section--alt {
-  background: var(--bg-soft);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-
 .section__head {
   display: flex;
   align-items: baseline;
@@ -647,25 +641,6 @@ section[id] { scroll-margin-top: 84px; }
   flex: 1;
   height: 1px;
   background: linear-gradient(90deg, var(--border) 0%, var(--accent) 100%);
-}
-
-.section__head--stacked {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: end;
-  gap: 24px;
-}
-.section__head--stacked .section__note {
-  margin: 0;
-  max-width: 420px;
-  text-align: right;
-  font-size: 0.95rem;
-}
-
-.section__note {
-  color: var(--muted);
-  margin: 0 0 40px;
-  font-size: 1rem;
 }
 
 /* ── ОБО МНЕ ────────────────────────────────── */
@@ -1240,8 +1215,6 @@ section[id] { scroll-margin-top: 84px; }
   .services__grid { grid-template-columns: repeat(2, 1fr); }
   .about__grid { grid-template-columns: 1fr; }
   .contacts__grid { grid-template-columns: 1fr; }
-  .section__head--stacked { grid-template-columns: 1fr; }
-  .section__head--stacked .section__note { text-align: left; }
 }
 
 @media (max-width: 760px) {
