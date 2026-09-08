@@ -1070,6 +1070,63 @@ section[id] { scroll-margin-top: 84px; }
   color: var(--accent) !important;
 }
 
+/* оффер-пилюля прямо под большой буквой «M» (только широкие экраны) */
+.hero__offer { display: none; }
+
+@media (min-width: 1100px) {
+  .hero__offer {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: absolute;
+    z-index: 2;
+    /* те же координаты, что у .hero__logomark, + высота буквы → ровно под «M» */
+    right: clamp(0px, 6vw, 90px);
+    top: calc(clamp(90px, 16vh, 200px) + clamp(15rem, 30vw, 26rem) + 10px);
+    padding: 12px 12px 12px 22px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+    box-shadow: 0 18px 50px rgba(45, 212, 191, 0.32);
+  }
+
+  /* на средне-широких экранах складываем пилюлю в колонку, чтобы не наезжала на текст */
+  .hero__offer {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .cta--slim { display: none; }
+}
+
+@media (min-width: 1360px) {
+  .hero__offer { flex-direction: row; text-align: left; }
+}
+
+.hero__offer-text {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  color: #06231f;
+}
+.hero__offer-text strong { font-weight: 800; white-space: nowrap; }
+
+.hero__offer-btn {
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: #06231f;
+  color: #ffffff;
+  font-size: 0.92rem;
+  white-space: nowrap;
+  box-shadow: 0 8px 22px rgba(6, 35, 31, 0.35);
+}
+.hero__offer-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(6, 35, 31, 0.45);
+}
+
 /* ── КОНТАКТЫ ───────────────────────────────── */
 .contacts {
   background:
