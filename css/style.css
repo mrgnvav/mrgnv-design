@@ -3,7 +3,7 @@
    Акцент: бирюзовый #2dd4bf
    ═══════════════════════════════════════════════ */
 
-/* WebP поддержка для изображений */
+/* WebP и SVG поддержка для изображений */
 .webp .logo__img {
   content: url('../img/logo.webp');
 }
@@ -11,6 +11,35 @@
 .webp .hero__logomark .logomark__letter {
   background: url('../img/logo.webp') no-repeat center;
   background-size: contain;
+}
+
+/* Оптимизация для Open Graph изображения */
+.og-cover {
+  width: 1200px;
+  height: 630px;
+  background: linear-gradient(135deg, #0d1214 0%, #1a2332 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.og-cover::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(45, 212, 191, 0.1) 0%, transparent 70%);
+  animation: ogPulse 4s ease-in-out infinite;
+}
+
+@keyframes ogPulse {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.1); opacity: 0.8; }
 }
 
 /* ── Переменные ─────────────────────────────── */
