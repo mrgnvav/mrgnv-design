@@ -4,6 +4,13 @@
 (function () {
   "use strict";
 
+  /* ── 0. Загрузочный экран ────────────────────── */
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.getElementById('loader').classList.add('hidden');
+    }, 1500);
+  });
+
   /* ── 1. Мобильное меню-бургер ────────────────── */
   var burger = document.getElementById("burger");
   var nav = document.getElementById("nav");
@@ -32,7 +39,37 @@
     });
   }
 
-  /* ── 2. Подсветка активного раздела скроллом ── */
+  /* ── 2. Параллакс эффекты при скролле ────────── */
+  function initParallax() {
+    const parallaxElements = document.querySelectorAll('[data-parallax]');
+    
+    parallaxElements.forEach(element => {
+      const speed = element.dataset.parallax || 0.5;
+      
+      window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const rate = scrolled * -speed;
+        element.style.transform = `translateY(${rate}px)`;
+      });
+    });
+    
+    // 3D параллакс для hero элементов
+    const heroShapes = document.querySelectorAll('.hero__shape, .hero__blob, .hero__logomark');
+    
+    heroShapes.forEach(shape => {
+      const speed = shape.dataset.depth || 1;
+      
+      window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const yPos = -(scrolled * speed / 100);
+        shape.style.transform = `translate3d(0, ${yPos}px, 0)`;
+      });
+    });
+  }
+  
+  initParallax();
+
+  /* ── 3. Подсветка активного раздела скроллом ── */
   var sections = Array.prototype.slice.call(document.querySelectorAll("section[id]"));
   var navLinks = nav
     ? Array.prototype.slice.call(nav.querySelectorAll("a"))
